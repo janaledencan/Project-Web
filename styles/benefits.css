@@ -10,20 +10,17 @@ nav{
 
 body{
     background-image: url("../images/background.png");
-    /*background-repeat: repeat-x;*/
     background-size: cover;
     background-size: 600px;
 }
 
 
-/*radi odlicno*/
 .container{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
 
-    /*iz onog starog karatea*/
     width: 600px;
 	padding: 20px;
 	box-sizing: border-box;
@@ -34,6 +31,25 @@ body{
 	height: 400px;
 	margin-top: 200px;
 }
+
+.table-responsive-md{
+    margin-top: -200px;
+}
+
+
+footer{
+    position: absolute;
+    background: #111;
+    color: #fff;
+    height: 100px; 
+    width: 100vw;
+}
+
+footer p{
+    text-align: center;
+    padding-top: 40px;
+}
+
 
 @media (min-width:1500px){
     .background-container{
@@ -52,7 +68,6 @@ body{
     }
 }
 
-
 @media screen and (max-width: 600px) {
 
     .container{
@@ -63,23 +78,4 @@ body{
     .background-container{
         padding-bottom: auto;
     }
-}
-
-
-.table-responsive-md{
-    margin-top: -200px;
-}
-
-
-footer{
-    position: absolute;
-    background: #111;
-    color: #fff;
-    height: 100px; 
-    width: 100vw;
-}
-
-footer p{
-    text-align: center;
-    padding-top: 40px;
 }
