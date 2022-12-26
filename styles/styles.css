@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    max-width: 100vw; /*samo width 100vw daje horizontalni klizac ! */
+}
+
+.karate-container{
+    display: flex;
+    flex-direction: row;
+
+    align-items: center; /*dolje-gore u sredini*/
+    position: relative;
+    /*margin-top: 240px; Da mi se slika vidi cijela
+    top:0 vh;*/
+}
+
+.karate-title{
+    position: absolute;
+    z-index:190; 
+    font-family: Permanent Marker;
+    background-color: black;
+    color: white;
+
+    top: 100%;
+    left: 3%;
+    /*transform: translate(20%, 100%);
+    transform: translate(50px, 200px);*/
+    text-shadow: 3px 3px darkgrey;
+   
+}
+
+.karate-title p{
+    font-size: 6vw ;/*Bio 2000 px, ovo je za responzivnost*/
+    margin: 0;
+}
+
+.karateka-img-container{ 
+    position: absolute;
+    object-fit: cover;  /*nije od youtube tutoriala, a mislile smo zbog toga da popuni svoj prostor*/
+    
+    width:1500px;
+}
+
+nav{
+    position: fixed;
+    right: 0;
+    z-index: 200;
+}
+
+article h2{
+    color:#fff;
+    margin-left:35px;
+}
+
+article{
+    position: absolute;
+    margin-top: 600px;
+    width: 100vw; /*Mozda promijeni u % da budes doslijedna*/
+    height:100%; /*Uzeo je cijelu visinu maina*/
+
+    display:flex;
+    /*JA sad dodala*/
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*Za responzivnu karticu*/
+@media screen and (max-width: 600px) {
+    article{
+        flex-direction:column;
+        justify-content: space-between;
+        /*height: fit-content;*/
+    }
+}
+
+section{
+    
+    background-color: #2c3f50;
+    color: white;
+    position: absolute;   
+    /*Stavila sam svakom sectionu zasebno
+    top: 50%;*/
+    left: 50%;
+    transform: translate(-50%);  /*Izbacila sam jedan -50%,*/
+    
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(209, 208, 208, 0.5);
+
+    /*display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;*/
+    transition: .5s;
+    /*margin-top: 400px;*/
+
+    width: 60%;
+    height: auto;
+}
+
+#carouselExampleControls{
+    margin-top: 800px;
+    /*ne radi align-items: center;*/
+}
+
+article:hover{
+    box-shadow: 0 15px 30px rgba(0,0,0,.5);  /*za sjene:horizontalno, vertikalno, koliko je siroka sjena, boja*/
+}
+
+/*1.*//* postavljen gore position:absolute;*/
+.main-info{
+    /*margin-top:100px;
+    top: 10%;*/
+    flex:3;
+    order:1;
+    /*width: 90vw;*/
+}
+
+/*2.*/ 
+.components-container{
+    display: flex;
+    flex-direction: row; 
+    /*Ne zeli mi jedno pokraj drugog biti*/
+    flex-wrap: wrap;
+    /*margin-top:800px;
+    top: 62%;*/
+
+    flex:3;
+    order:2;
+
+    column-count: 2; /*S time sam uspjela staviti podstilove pokraj i to desno,ali dodavanjem ul pomaknulo se lijevo*/
+}
+
+.first-paragraph{
+    flex: 2;  /*Trebalo bi ibitit za postavljanje dimenzije širine tog paragrafa*/
+    order: 1;
+}
+
+/*Dodan u potpunosti taj naziv*/
+.second-paragraph{
+    flex: 1;
+    order: 2;
+}
+
+.substyles{
+    position: absolute;
+    margin-left: 70%;
+}
+
+/*3.*/
+.focus{
+    /*margin-top:1500px;
+    top: 100%;*/
+    /*bottom: 0;*/
+
+    flex:1;
+    order:3
+}
+
+
+/*Za Podnozje!!!*/
+.last-division{
+    position: relative;
+    margin-top: 850px; /*Ne mogu drugacije pomaknuti footer da bude dolje*/
+}
+
+footer{
+
+    bottom: 0;
+    /*left: 0;
+    right: 0;*/
+    position: absolute;
+    background: #018786;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #111;
+    margin-top: -500px;
+}
+
+footer p{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    justify-content: space-around;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    margin-left: 45px;
+ }
+
+
+
+@media (min-width:1401px){
+    .karate-title{
+       /*align-items: center;
+        position: relative;*/
+        margin-top:100px;
+    } 
+    
+    section{
+        justify-content: space-between;
+        max-width: 922px;
+    }
+
+    .main-info{
+        top: 0px;
+    }
+    .components-container{
+        top: 580px;
+    }
+    .focus{
+        top: 1360px;
+    }
+
+    #carouselExampleControls{
+        top: 1460px;
+    }
+
+    .carousel-position{
+        margin-left: 200px;
+    }
+
+    .last-division{
+        margin-top: 1730px;
+    }
+   
+}
+
+@media (max-width: 1400px)and (min-width:1101px){
+    .karate-title p{
+        font-size: 7.5vw ;
+    } 
+
+    section{
+        max-width: 727px;
+    }
+
+    .main-info{
+        top: -60px;
+    }
+    .components-container{
+        top: 590px;
+    }
+    .focus{
+        top: 1570px;
+    }
+
+    #carouselExampleControls{
+        top: 1700px;
+    }
+
+    .carousel-position{
+        margin-left: 140px;
+    }
+
+    .last-division{
+        margin-top: 1920px;
+    }
+
+}
+
+@media (max-width: 1100px)and (min-width:851px){
+    .karate-title p{
+        font-size: 9.5vw ;
+    } 
+
+    section{
+        max-width: 572px;
+    }
+    
+    .main-info{
+        top: -200px;
+    }
+    .components-container{
+        top: 600px;
+    }
+    .focus{
+        top: 1870px;
+    }
+
+    #carouselExampleControls{
+        top: 2020px;
+    }
+
+    .carousel-position{
+        margin-left: 75px;
+    }
+
+    .last-division{
+        margin-top: 2200px;
+    }
+}
+
+@media (max-width: 1100px)and (min-width:920px){
+    .focus{
+        top: 1800px;
+    }
+
+    #carouselExampleControls{
+        top: 1950px;
+    }
+
+    .carousel-position{
+        margin-left: 90px;
+    }
+
+    .last-division{
+        margin-top: 2185px;
+    }
+}
+
+@media (max-width: 850.9px)and (min-width:601px){  /*Radio je problem 850.4*/
+    .karate-title p{
+        font-size: 9.5vw ;
+    } 
+
+    article h2{  
+        display:none; 
+    }
+
+    section{
+        max-width: 384px;
+    }
+
+    .main-info{
+        top: -250px;
+    }
+
+    .components-container{
+        top: 850px;
+
+        display: grid;
+        grid-template-rows: 2fr 0.5fr;
+    }
+    /*Za postavljanje substyles ispod*/
+    .first-paragraph{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .substyles{
+        grid-column: 1;
+        grid-row:2;
+        margin-left:0;
+        margin-top:30px;
+    }
+
+
+    .focus{
+        top: 2420px;
+    }
+
+    #carouselExampleControls{
+        top: 2700px;
+    }
+
+    .carousel-position{
+        margin-left: 35px;
+    }
+
+    .last-division{
+        margin-top: 2920px;
+    }
+}
+
+@media (max-width: 600.9px){
+    .karate-title p{
+        font-size: 11vw ; 
+    } 
+
+    article h2{  
+        display:none; 
+    }
+
+    section{
+        max-width: 311px;
+    }
+
+    .main-info{
+        top: -350px;
+    }
+    .components-container{
+        top: 1030px;
+
+        display: grid;
+        grid-template-rows: 2fr 0.4fr;
+        
+    }
+    /*Za postavljanje substyles ispod*/
+    .first-paragraph{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .substyles{
+        grid-column: 1;
+        grid-row:2;
+        margin-left:0;
+        margin-top:30px;
+    }
+
+    .focus{
+        top: 2900px;
+    }
+
+    #carouselExampleControls{
+        top: 3300px;
+    }
+
+    .carousel-position{
+        margin-left: 0px;
+    }
+
+    .last-division{
+        margin-top: 3520px;
+    }
+}
+

@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../images/background.png);
+   /* background-repeat: no-repeat;*/
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    background-size: 600px; 
+}
+
+nav{
+    position: fixed;
+    margin-top: -10px;
+}
+
+footer{
+    position: absolute;
+    background: #111;
+    color: #fff;
+    height: 100px; 
+    width: 100vw;
+    margin-top: 150px;
+    /*position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    padding-top: 40px;
+    color: #fff;
+    */
+}
+
+footer p{
+    text-align: center;
+    padding-top: 40px;
+}
+
+@media screen and (max-width: 600px) {
+   
+    /*Ne radi*/
+    /*footer{
+        
+        margin-top: -100px;
+    }*/
+    
+    main{
+        margin-bottom: 100px;
+    }
+
+    .sokon{
+        margin-top: 40px;
+    }
+
+    .about-image{
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+}
+
+/*Provjeriti da nije ono gore nepotrebno*/
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  
+    .about-text{
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+}
+
+.about-text h2{
+    color:#b00020;
+    /*font-family: Permanent Marker; Nema izgleda taj font za takav "mali" txt*/
+    font-style: bold;
+}
