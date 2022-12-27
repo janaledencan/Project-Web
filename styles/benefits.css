@@ -9,7 +9,7 @@ nav{
 }
 
 body{
-    background-image: url("../images/background.png");
+    background-image: url("../images/background.webp");
     background-size: cover;
     background-size: 600px;
 }
@@ -37,17 +37,14 @@ body{
 }
 
 
-footer{
-    position: absolute;
+footer {
+    position: relative;
     background: #111;
     color: #fff;
-    height: 100px; 
-    width: 100vw;
-}
-
-footer p{
+    height: 80px; 
+    max-width: 100vw;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 30px; 
 }
 
 
