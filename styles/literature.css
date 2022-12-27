@@ -19,6 +19,11 @@ body{
     margin-left: 50px;
 }
 
+h1, h3{
+    font-family: 'Reggae One', cursive;
+    font-weight: bold;
+}
+
 main{
     display: grid;
     grid-template-columns: 30% 1fr ;
@@ -33,6 +38,9 @@ main{
         margin-top: 50px;
 } 
 
+a{
+    color:#474978;
+}
 footer {
     position: relative;
     background: #111;
