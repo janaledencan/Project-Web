@@ -50,6 +50,10 @@ footer {
         margin-bottom: 10px;
     }
 
+    article{
+        margin-left: 15px;
+    }
+
 }
 
 @media screen and (min-width: 200px) and (max-width: 600px) {
