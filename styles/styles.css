@@ -5,7 +5,7 @@
 
 body{
     background-color: black;
-    max-width: 100vw; /*samo width 100vw daje horizontalni klizac ! */
+    max-width: 100vw; 
 }
 
 .karate-container{
@@ -25,14 +25,12 @@ body{
 
     top: 100%;
     left: 3%;
-    /*transform: translate(20%, 100%);
-    transform: translate(50px, 200px);*/
     text-shadow: 3px 3px darkgrey;
    
 }
 
 .karate-title p{
-    font-size: 6vw ;/*Bio 2000 px, ovo je za responzivnost*/
+    font-size: 6vw ;
     margin: 0;
 }
 
@@ -67,12 +65,11 @@ article{
     justify-content: space-between;
 }
 
-/*Za responzivnu karticu*/
+
 @media screen and (max-width: 600px) {
     article{
         flex-direction:column;
         justify-content: space-between;
-        /*height: fit-content;*/
     }
 }
 
@@ -412,7 +409,6 @@ footer p{
     }
 
     section{
-        /*max-width: 305px;*/
         width:75%;
     }
 
@@ -675,8 +671,3 @@ footer p{
         margin-top: 4780px;
     }
 }
-
-*/
-
-
-
